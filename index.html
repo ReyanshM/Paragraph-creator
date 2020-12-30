@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph maker</title>
+</head>
+<body>
+    <center>
+        <h1>Paragraph maker</h1>
+    <div>
+        <label>Input 1</label>
+        <input id="I1" type="text">
+        <br>
+        <br>
+        <label>Input 2</label>
+        <input id="I2" type="text">
+        <br>
+        <br>
+        <label>Input 3</label>
+        <input id="I3" type="text">
+        <br>
+        <br>
+        <label>Input 4</label>
+        <input id="I4" type="text">
+        <br>
+        <br>
+        <label>Input 5</label>
+        <input id="I5" type="text">
+    </div>
+    <br>
+    <button onclick="create()">Create</button>
+    <br>
+    <p id="para"></p>
+    </center>
+    <script>
+        var paragraph=[];
+        function create(){
+            paragraph.push(document.getElementById("I1").value);
+            paragraph.push(document.getElementById("I2").value);
+            paragraph.push(document.getElementById("I3").value);
+            paragraph.push(document.getElementById("I4").value);
+            paragraph.push(document.getElementById("I5").value);
+            document.getElementById("para").textContent=paragraph.join(" ");
+            paragraph=[];
+        }
+    </script>
+</body>
+</html>
